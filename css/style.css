@@ -1,3 +1,54 @@
 @import url("./reset.css");
 
 /* Your Code Here */
+body {
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: rgb(85, 85, 170);
+}
+
+.site-header {
+    background: #ddd;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: rgb(124, 78, 78);
+    color: #bbb;
+}
+
+.site-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    background-color: whitesmoke;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.Column {
+    background: #eee;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    background-color: green;
+    color: #bbb;
+}
+
+.site-aside {
+    background: #bbb;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgb(124, 78, 78);
+    color: #bbb;
+}
+
+.site-footer {
+    background: #ddd;
+    padding: 1.5rem;
+    text-align: center;
+    background-color: aqua;
+}

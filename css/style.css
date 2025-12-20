@@ -1,6 +1,6 @@
 @import url("./reset.css");
 
-/* Your Code Here */
+/* Base Mobile Styles */
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
@@ -51,4 +51,26 @@ body {
     padding: 1.5rem;
     text-align: center;
     background-color: aqua;
+}
+
+/* --- Your Media Query Code Here --- */
+
+@media (min-width: 768px) {
+    /* 1. Change the main content container to show columns side-by-side */
+    .content-grid {
+        grid-template-columns: 2fr 1fr; /* Main content takes 2 parts, Aside takes 1 */
+        align-items: start;
+    }
+
+    /* 2. If .site-column contains the internal green boxes, display them horizontally */
+    .site-column {
+        grid-template-columns: repeat(3, 1fr); /* Creates a 3-column row for internal items */
+        gap: 1rem;
+    }
+
+    /* 3. Adjusting body constraints for larger screens */
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }

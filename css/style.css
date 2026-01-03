@@ -50,6 +50,20 @@ body {
   align-items: stretch;
 }
 
+.article-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.column {
+  background-color: pink;
+  padding: 1em;
+  flex: 1;
+  text-align: center;
+}
+
 .content-grid .column {
   background-color: pink;
   flex: 1;

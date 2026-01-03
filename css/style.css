@@ -2,55 +2,67 @@
 
 /* Base Mobile Styles */
 body {
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    gap: 1rem;
-    padding: 1rem;
-    background-color: rgb(85, 85, 170);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "aside-left article aside-right"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
 }
 
 .site-header {
-    background: #ddd;
-    padding: 1.5rem;
-    text-align: center;
-    background-color: rgb(124, 78, 78);
-    color: #bbb;
+  grid-area: header;
+  background-color: purple;
+  color: white;
+  padding: 1em;
+  text-align: center;
 }
 
-.site-column {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: whitesmoke;
+.site-aside-left {
+  grid-area: aside-left;
+  background-color: darkblue;
+  color: white;
+  padding: 1em;
 }
 
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
+.site-aside-right {
+  grid-area: aside-right;
+  background-color: teal;
+  color: white;
+  padding: 1em;
 }
 
-.Column {
-    background: #eee;
-    padding: 2rem;
-    text-align: center;
-    border: 1px solid #ccc;
-    background-color: green;
-    color: #bbb;
+.site-article {
+  grid-area: article;
+  background-color: lightgreen;
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: space-around;
+  align-items: stretch;
 }
 
-.site-aside {
-    background: #bbb;
-    padding: 2rem;
-    text-align: center;
-    background-color: rgb(124, 78, 78);
-    color: #bbb;
+.content-grid .column {
+  background-color: pink;
+  flex: 1;
+  padding: 1em;
+  text-align: center;
 }
 
 .site-footer {
-    background: #ddd;
-    padding: 1.5rem;
-    text-align: center;
-    background-color: aqua;
+  grid-area: footer;
+  background-color: orange;
+  color: white;
+  padding: 1em;
+  text-align: center;
 }
 
 /* --- Your Media Query Code Here --- */

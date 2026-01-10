@@ -10,12 +10,14 @@ body {
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header header header"
-    "aside-left article aside-right"
-    "footer footer footer";
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: auto 1fr auto;
-  height: 100vh;
+    "header"
+    "article"
+    "aside-left"
+    "aside-right"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+  height: auto;
 }
 
 .site-header {
@@ -96,4 +98,16 @@ body {
         max-width: 1200px;
         margin: 0 auto;
     }
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      "header header header"
+      "aside-left article aside-right"
+      "footer footer footer";
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
 }
